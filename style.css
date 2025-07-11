@@ -10,6 +10,7 @@ body {
   color: #00ffe0;
   min-height: 100vh;
   padding: 0 1rem;
+  overflow-x: hidden;
 }
 
 /*body::after {*/
@@ -45,6 +46,15 @@ nav a {
   text-decoration: none;
   font-weight: bold;
   transition: color 0.3s ease;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  padding-top: 0.5rem;
+}
+
+nav a {
+  font-size: 1rem;
 }
 
 nav a:hover {
@@ -68,12 +78,13 @@ nav a:hover {
 }
 
 .card {
+  width: 100%;
+  max-width: 900px;
+  margin: 2rem auto;
+  padding: 1.5rem;
+  border-radius: 15px;
   background: rgba(0, 10, 30, 0.6);
   border: 1px solid #00ffe0;
-  border-radius: 15px;
-  padding: 2rem;
-  margin: 2rem auto;
-  max-width: 800px;
   box-shadow: 0 0 15px rgba(0, 255, 224, 0.4);
 }
 
@@ -169,5 +180,39 @@ header {
   66%  { border-color: #0033ff; }  /* Red */
   100% { border-color: #5f3bff; }  /* Back to Yellow */
 }
+
+header h1 {
+  font-size: clamp(1.5rem, 4vw, 2.5rem);
+}
+
+.hero h2 {
+  font-size: clamp(1.2rem, 4vw, 2rem);
+}
+
+@media (max-width: 600px) {
+  .hero {
+    padding: 2rem 1rem;
+  }
+
+  .card {
+    padding: 1rem;
+    margin: 1rem 0;
+  }
+
+  .radar-circle {
+    width: 200px;
+    height: 200px;
+    top: 60%;
+  }
+
+  header h1 {
+    font-size: 1.5rem;
+  }
+
+  nav a {
+    font-size: 0.9rem;
+  }
+}
+
 
 
