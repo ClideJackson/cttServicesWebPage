@@ -57,6 +57,52 @@
     </p>
 </section>
 
+<div class="book-btn-container">
+    <a href="#services" class="book-btn">Book a Service</a>
+</div>
+
+<!-- Book a Service Form (Popup) -->
+<div id="popup-form" class="popup-overlay">
+    <div class="popup-content">
+        <span class="close-btn" onclick="closePopup()">&times;</span>
+        <h2>Book a Service</h2>
+        <form>
+            <label for="name">Name:</label>
+            <input type="text" id="name" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" required>
+
+            <label for="service">Service:</label>
+            <select id="service" required>
+                <option value="">-- Select a Service --</option>
+                <option>Internet Browsing</option>
+                <option>Gaming</option>
+                <option>Printing</option>
+                <option>Document Help</option>
+            </select>
+
+            <label for="message">Message / Details:</label>
+            <textarea id="message" rows="4" placeholder="Include preferred time, service details, or special requests..."></textarea>
+
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+</div>
+
+<script>
+    const popup = document.getElementById("popup-form");
+
+    document.querySelector(".book-btn").addEventListener("click", function (e) {
+        e.preventDefault();
+        popup.style.display = "flex";
+    });
+
+    function closePopup() {
+        popup.style.display = "none";
+    }
+</script>
+
 
 <footer>
     <p>© 2025 CTT Internet Services | Powered by CTT Technologies</p>
