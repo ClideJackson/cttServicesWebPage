@@ -7,7 +7,10 @@
     <link rel="stylesheet" href="style.css"/>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap" rel="stylesheet">
-    <script src="https://kit.fontawesome.com/your_kit_code.js" crossorigin="anonymous"></script>
+    <link
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+            rel="stylesheet"
+    />
 </head>
 <div class="radar-circle"></div>
 <body>
@@ -23,35 +26,52 @@
 
 <section class="hero">
     <h2>Fast. Reliable. Secure</h2>
-    <p>Your local hub for printing, gaming, browsing and more.</p>
+    <p>Your local link to the digital world</p>
 </section>
 
 <section id="about" class="card">
     <h2>About Us</h2>
-    <p>CTT is a modern internet cafe focused on providing high speed internet access, printing services, and a comfortable gaming - working environment. Whether you are working, studying, or gaming - We've got you covered</p>
+    <p>CTT is a modern internet cafe focused on providing high-speed internet access, printing services, and a comfortable gaming and working environment. We aim to provide accessible digital services to our local community, bridging the digital divide and supporting small businesses, students, and professionals with fast and reliable internet access, printing, and design solutions. Whether you are working, studying, or gaming — we've got you covered.</p>
 </section>
 
 <section id="services" class="card">
     <h2>Services</h2>
     <ul>
-        <li><i class="fas fa-globe"></i>Internet Browsing</li>
-        <li><i class="fas fa-gamepad"></i> Online & LAN Gaming</li>
-        <li><i class="fas fa-print"></i> Printing & Scanning</li>
-        <li><i class="fas fa-desktop"></i> PC Access & Document Work</li>
+        <ul>
+            <li><i class="fa-solid fa-globe"></i> High-speed WiFi Internet Access</li>
+            <li><i class="fa-solid fa-gamepad"></i> Online & LAN Gaming</li>
+            <li><i class="fa-solid fa-print"></i> Printing & Scanning</li>
+            <li><i class="fa-solid fa-desktop"></i> PC Access & Document Work</li>
+            <li><i class="fa-solid fa-paintbrush"></i> Logo Design</li>
+            <li><i class="fa-solid fa-tshirt"></i> T-shirt Printing</li>
+            <li><i class="fa-solid fa-poster"></i> Poster & Card Design</li>
+            <li><i class="fa-solid fa-file-lines"></i> Professional CV / Resume design</li>
+            <li><i class="fa-solid fa-laptop-code"></i> Website Design</li>
+        </ul>
     </ul>
 </section>
 
 <section id="contact" class="card">
     <h2>Contact Us</h2>
-<!--    <p><i class="fas fa-map-marker-alt"></i> 112 Mbhedle Village, Giyani</p>-->
-    <p><i class="fas fa-phone-alt"></i>
+    <p><i class="fas fa-phone"></i>
         <a href="tel:0810020325">081 002 0325</a> |
-        <a href="tel:0735620684">073 562 0684</a>
+        <a href="tel:0735620684">073 562 0684</a> |
+        <a href="tel:0738292717">073 562 0684</a>
     </p>
-    <p><i class="fab fa-whatsapp"></i>
-        <a href="https://wa.me/27810020325" target="_blank">WhatsApp Us</a>
-    </p>
+    <ul>
+        <li>
+            <a href="https://wa.me/27735620684" target="_blank">
+                <i class="fab fa-whatsapp"></i> Trust
+            </a>
+            <a href="https://wa.me/27810020325" target="_blank">
+                <i class="fab fa-whatsapp"></i> Cliven
+            </a>
+            <a href="https://wa.me/27738292717" target="_blank">
+                <i class="fab fa-whatsapp"></i> Thokozane
+            </a>
+        </li>
 
+    </ul>
     <p><i class="fas fa-envelope"></i>
         <a href="mailto:jackymashimbhy@gmail.com">cttinternetservices@info.com</a>
     </p>
@@ -66,15 +86,17 @@
     <div class="popup-content">
         <span class="close-btn" onclick="closePopup()">&times;</span>
         <h2>Book a Service</h2>
-        <form>
+        <form action="https://formsubmit.co/jackymashimbhy@gmail.com" method="POST">
+            <input type="hidden" name="_captcha" value="false">
+
             <label for="name">Name:</label>
-            <input type="text" id="name" required>
+            <input type="text" name="name" id="name" required>
 
             <label for="email">Email:</label>
-            <input type="email" id="email" required>
+            <input type="email" name="email" id="email" required>
 
             <label for="service">Service:</label>
-            <select id="service" required>
+            <select name="service" id="service" required>
                 <option value="">-- Select a Service --</option>
                 <option>Internet Browsing</option>
                 <option>Gaming</option>
@@ -83,12 +105,18 @@
             </select>
 
             <label for="message">Message / Details:</label>
-            <textarea id="message" rows="4" placeholder="Include preferred time, service details, or special requests..."></textarea>
+            <textarea name="message" id="message" rows="4" placeholder="Include preferred time, service details, or special requests..."></textarea>
 
             <button type="submit">Submit</button>
         </form>
     </div>
 </div>
+
+
+
+
+
+
 
 <script>
     const popup = document.getElementById("popup-form");
